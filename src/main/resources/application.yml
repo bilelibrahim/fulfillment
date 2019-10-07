@@ -1,0 +1,35 @@
+server:
+  port: 8095
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: fulfillment
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/fulfillment
+  kafka:
+    bootstrap-servers: localhost:9092
+    topic:
+      accounts-customer: accounts.customer.change
+      orders-order: orders.order.fulfill
+      fulfillment-order: fulfillment.order.change
+    consumer:
+      group-id: fulfillment
+      auto-offset-reset: earliest
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+logging:
+  level:
+    root: DEBUG
+---
+server:
+  port: 8080
+spring:
+  profiles: gke
+logging:
+  level:
+    root: INFO
