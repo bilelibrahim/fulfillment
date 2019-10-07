@@ -38,7 +38,7 @@ public class SwaggerConfig {
                         "https://programmaticponderings.com/about",
                         "bilel.brahim@gmail.com"))
                 .license("Apache License Version 2.0")
-                .licenseUrl("https://github.com/bilelibrahim/storefront-demo-fulfillment/blob/master/LICENSE")
+                .licenseUrl("https://github.com/bilelibrahim/-fulfillment/blob/master/LICENSE")
                 .version("2.1.0")
                 .build();
     }
