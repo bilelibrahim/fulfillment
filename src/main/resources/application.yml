@@ -7,9 +7,9 @@ spring:
     name: fulfillment
   data:
     mongodb:
-      uri: mongodb://localhost:27017/fulfillment
+      uri: mongodb+srv://demo_user:Feltaoui581@storefront-cluster-m0-ojqiy.gcp.mongodb.net/fulfillment
   kafka:
-    bootstrap-servers: localhost:9092
+    bootstrap-servers: pkc-4r297.europe-west1.gcp.confluent.cloud:9092
     topic:
       accounts-customer: accounts.customer.change
       orders-order: orders.order.fulfill
